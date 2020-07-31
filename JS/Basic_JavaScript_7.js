@@ -4,8 +4,12 @@ function Testing() {                            //function that calls both the l
     document.getElementById("Sample").innerHTML = Sample_String + Another_String;
 }
 
-function Testing_2() {                          //function that calls the global variable but also the variable from "Testing" function
-    document.getElementById("Sample_2").innerHTML = Sample_String + Another_String;
+//function Testing_2() {                          //function that calls the global variable but also the variable from "Testing" function and fails because it is calling a variable that is undefined
+    //document.getElementById("Sample_2").innerHTML = Sample_String + Another_String;
+//}
+
+function Testing_2() {                          //debugged function. No longer calls for undefined variable
+    document.getElementById("Sample_2").innerHTML = Another_String;
 }
 
 function Get_to_Bed() {                         //Determins the time of day and if it is before 8pm asks how you are doing, else tells you to go to bed.
